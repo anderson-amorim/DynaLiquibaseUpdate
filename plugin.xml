@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            objectClass="org.eclipse.core.resources.IFile"
+            id="LiquibaseUpdate.contribution1"            
+    		nameFilter="*.xml">
+         <menu
+               label="Dynamix Liquibase"
+               path="additions"               
+               id="LiquibaseUpdate.menu1">
+            <separator name="rdahom"></separator>
+            <separator name="rdapar"></separator>
+         </menu>
+         <action
+               label="Update - DYNADEV_SINGULAR"
+               class="liquibaseupdate.popup.actions.ActionDynaDevSingular"
+               menubarPath="LiquibaseUpdate.menu1/rdahom"
+               enablesFor="1"
+               id="LiquibaseUpdate.RDAHOM_SINGULAR">
+         </action>
+         <action
+               label="Update - DYNADEV_DATACENTER"
+               class="liquibaseupdate.popup.actions.ActionDynaDevDatacenter"
+               menubarPath="LiquibaseUpdate.menu1/rdahom"
+               enablesFor="1"
+               id="LiquibaseUpdate.RDAHOM_DATACENTER">
+         </action>
+         <action
+               label="Update - RDAPAR_SINGULAR"
+               class="liquibaseupdate.popup.actions.ActionRdaparSingular"
+               menubarPath="LiquibaseUpdate.menu1/rdapar"
+               enablesFor="1"
+               id="LiquibaseUpdate.RDAPAR_SINGULAR">
+         </action>
+         <action
+               label="Update - RDAPAR_DATACENTER"
+               class="liquibaseupdate.popup.actions.ActionRdaparDatacenter"
+               menubarPath="LiquibaseUpdate.menu1/rdapar"
+               enablesFor="1"
+               id="LiquibaseUpdate.RDAPAR_DATACENTER">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
